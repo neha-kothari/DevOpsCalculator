@@ -14,6 +14,7 @@ public class Calculator {
             fact *= i;
         }
         return fact;
+        //Test Commit
     }
 
     public static double logarithm(double var){
