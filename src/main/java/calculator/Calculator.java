@@ -1,3 +1,5 @@
+package calculator;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import java.util.Scanner;
@@ -6,16 +8,18 @@ import static java.lang.System.exit;
 public class Calculator {
 
     private static final Logger logger = LogManager.getLogger(Calculator.class);
+    public Calculator(){
 
-    public static double squareRoot(double var){
+    }
+
+    public double squareRoot(double var){
         logger.info("Calculating Square Root of : " + var + "\n Result : " + Math.sqrt(var));
         return Math.sqrt(var);
     }
-
-    public static double factorial(double var){
+    public double factorial(double var){
         if(var < 0){
             logger.info("Factorial of negative number is not possible!");
-            return -1;
+            return Double.NaN;
         }
         else{
             double fact = 1;
@@ -27,21 +31,22 @@ public class Calculator {
         }
     }
 
-    public static double logarithm(double var){
+    public double logarithm(double var){
         logger.info("Calculating Natural Logarithm of : " + var + "\n Result : " + Math.log(var));
         return Math.log(var);
     }
 
-    public static double power(double var1, double var2){
+    public double power(double var1, double var2){
         logger.info("Power : " + var1 + "^" + var2 + "/n Result : " + Math.pow(var1, var2));
         return Math.pow(var1, var2);
     }
 
     public static void main(String[] args) {
+        Calculator c = new Calculator();
         int choice;
         double x, y;
         Scanner scanner = new Scanner(System.in);
-        System.out.println("---------- !! Calculator Operations !! ----------");
+        System.out.println("---------- !! calculator.Calculator Operations !! ----------");
         while(true){
             System.out.println("1. Square Root");
             System.out.println("2. Factorial");
@@ -55,7 +60,7 @@ public class Calculator {
                     System.out.println("Square Root Operation:");
                     System.out.print("Enter the number: ");
                     x = scanner.nextDouble();
-                    System.out.println("Square Root of " + x + " : " + squareRoot(x));
+                    System.out.println("Square Root of " + x + " : " + c.squareRoot(x));
                     System.out.println("---------- !! Result evaluated !! ----------");
                     break;
 
@@ -63,7 +68,7 @@ public class Calculator {
                     System.out.println("Factorial Operation:");
                     System.out.print("Enter the number: ");
                     x = scanner.nextDouble();
-                    double result = factorial(x);
+                    double result = c.factorial(x);
                     System.out.println("Factorial of " + x + " : " + result);
                     System.out.println("---------- !! Result evaluated !! ----------");
                     break;
@@ -71,7 +76,7 @@ public class Calculator {
                     System.out.println("Natural Logarithm Operation:");
                     System.out.print("Enter the number: ");
                     x = scanner.nextDouble();
-                    System.out.println("Natural Logarithm of " + x + " : " + logarithm(x));
+                    System.out.println("Natural Logarithm of " + x + " : " + c.logarithm(x));
                     System.out.println("---------- !! Result evaluated !! ----------");
                     break;
                 case 4:  // For Power Function
@@ -80,7 +85,7 @@ public class Calculator {
                     x = scanner.nextDouble();
                     System.out.println("Enter the second number : ");
                     y = scanner.nextDouble();
-                    System.out.println("Power :" + x + "^" + y + " : " + power(x,y));
+                    System.out.println("Power :" + x + "^" + y + " : " + c.power(x,y));
                     System.out.println("---------- !! Result evaluated !! ----------");
                     break;
 

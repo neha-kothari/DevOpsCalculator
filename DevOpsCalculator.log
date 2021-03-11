@@ -1,0 +1,26 @@
+2021-03-11 22:30:54.755 [Calculator.java] INFO  calculator.Calculator - Power : 0.0^0.0/n Result : 1.0
+2021-03-11 22:30:54.760 [Calculator.java] INFO  calculator.Calculator - Power : 2.0^-3.0/n Result : 0.125
+2021-03-11 22:30:54.762 [Calculator.java] INFO  calculator.Calculator - Factorial of the number : 4.0
+ Result is : 24.0
+2021-03-11 22:30:54.763 [Calculator.java] INFO  calculator.Calculator - Factorial of negative number is not possible!
+2021-03-11 22:30:54.764 [Calculator.java] INFO  calculator.Calculator - Factorial of negative number is not possible!
+2021-03-11 22:30:54.765 [Calculator.java] INFO  calculator.Calculator - Factorial of the number : 36.0
+ Result is : 3.719933267899012E41
+2021-03-11 22:30:54.767 [Calculator.java] INFO  calculator.Calculator - Calculating Natural Logarithm of : 10.0
+ Result : 2.302585092994046
+2021-03-11 22:30:54.767 [Calculator.java] INFO  calculator.Calculator - Calculating Natural Logarithm of : -25.0
+ Result : NaN
+2021-03-11 22:30:54.768 [Calculator.java] INFO  calculator.Calculator - Calculating Natural Logarithm of : -24.0
+ Result : NaN
+2021-03-11 22:30:54.769 [Calculator.java] INFO  calculator.Calculator - Calculating Natural Logarithm of : 36.0
+ Result : 3.58351893845611
+2021-03-11 22:30:54.771 [Calculator.java] INFO  calculator.Calculator - Calculating Square Root of : 25.0
+ Result : 5.0
+2021-03-11 22:30:54.771 [Calculator.java] INFO  calculator.Calculator - Calculating Square Root of : -25.0
+ Result : NaN
+2021-03-11 22:30:54.773 [Calculator.java] INFO  calculator.Calculator - Calculating Square Root of : -24.0
+ Result : NaN
+2021-03-11 22:30:54.773 [Calculator.java] INFO  calculator.Calculator - Calculating Square Root of : 36.0
+ Result : 6.0
+2021-03-11 22:30:54.775 [Calculator.java] INFO  calculator.Calculator - Power : 2.0^3.0/n Result : 8.0
+2021-03-11 22:30:54.775 [Calculator.java] INFO  calculator.Calculator - Power : 2.0^-3.0/n Result : 0.125
