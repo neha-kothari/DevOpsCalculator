@@ -1,27 +1,39 @@
-
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import java.util.Scanner;
-
 import static java.lang.System.exit;
 
 public class Calculator {
+
+    private static final Logger logger = LogManager.getLogger(Calculator.class);
+
     public static double squareRoot(double var){
+        logger.info("Calculating Square Root of : " + var + "\n Result : " + Math.sqrt(var));
         return Math.sqrt(var);
     }
 
     public static double factorial(double var){
-        double fact = 1;
-        for(int i = 1; i <= var; i++){
-            fact *= i;
+        if(var < 0){
+            logger.info("Factorial of negative number is not possible!");
+            return -1;
         }
-        return fact;
-        //Test Commit
+        else{
+            double fact = 1;
+            for(int i = 1; i <= var; i++){
+                fact *= i;
+            }
+            logger.info("Factorial of the number : " + var + "\n Result is : " + fact);
+            return fact;
+        }
     }
 
     public static double logarithm(double var){
+        logger.info("Calculating Natural Logarithm of : " + var + "\n Result : " + Math.log(var));
         return Math.log(var);
     }
 
     public static double power(double var1, double var2){
+        logger.info("Power : " + var1 + "^" + var2 + "/n Result : " + Math.pow(var1, var2));
         return Math.pow(var1, var2);
     }
 
@@ -39,7 +51,7 @@ public class Calculator {
             System.out.print("Please enter your choice : ");
             choice = scanner.nextInt();
             switch (choice){
-                case 1:
+                case 1:  // For Square Root
                     System.out.println("Square Root Operation:");
                     System.out.print("Enter the number: ");
                     x = scanner.nextDouble();
@@ -47,7 +59,7 @@ public class Calculator {
                     System.out.println("---------- !! Result evaluated !! ----------");
                     break;
 
-                case 2:
+                case 2: // For Factorial
                     System.out.println("Factorial Operation:");
                     System.out.print("Enter the number: ");
                     x = scanner.nextDouble();
@@ -55,14 +67,14 @@ public class Calculator {
                     System.out.println("Factorial of " + x + " : " + result);
                     System.out.println("---------- !! Result evaluated !! ----------");
                     break;
-                case 3:
+                case 3:  // For Natural Logarithm
                     System.out.println("Natural Logarithm Operation:");
                     System.out.print("Enter the number: ");
                     x = scanner.nextDouble();
                     System.out.println("Natural Logarithm of " + x + " : " + logarithm(x));
                     System.out.println("---------- !! Result evaluated !! ----------");
                     break;
-                case 4:
+                case 4:  // For Power Function
                     System.out.println("Exponential Function:");
                     System.out.println("Enter the first number: ");
                     x = scanner.nextDouble();
